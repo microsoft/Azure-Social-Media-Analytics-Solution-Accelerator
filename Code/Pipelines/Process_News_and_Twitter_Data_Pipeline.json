@@ -1,0 +1,82 @@
+{
+    "name": "Process_News_and_Twitter_Data_Pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Process_News_Twitter_Data",
+                "type": "SynapseNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebook": {
+                        "referenceName": "Process_News_Twitter_Data",
+                        "type": "NotebookReference"
+                    },
+                    "parameters": {
+                        "data_lake_account_name": {
+                            "value": {
+                                "value": "@pipeline().parameters.data_lake_account_name",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        },
+                        "file_system_name": {
+                            "value": {
+                                "value": "@pipeline().parameters.file_system_name",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        },
+                        "keyvault_name": {
+                            "value": {
+                                "value": "@pipeline().parameters.keyvault_name",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        },
+                        "query": {
+                            "value": {
+                                "value": "@pipeline().parameters.query",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        },
+                        "topic": {
+                            "value": {
+                                "value": "@pipeline().parameters.topic",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        }
+                    },
+                    "snapshot": true
+                }
+            }
+        ],
+        "parameters": {
+            "data_lake_account_name": {
+                "type": "string"
+            },
+            "file_system_name": {
+                "type": "string"
+            },
+            "keyvault_name": {
+                "type": "string"
+            },
+            "query": {
+                "type": "string"
+            },
+            "topic": {
+                "type": "string"
+            }
+        },
+        "annotations": []
+    }
+}

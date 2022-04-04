@@ -1,0 +1,228 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    
+    "parameters": {
+        "KeyVaultName":{
+            "type":"string",
+            "defaultValue": "xxx", 
+            "metadata": {
+                "description":"The name of your Key Vault that you are using for this solution"
+            }
+        },
+        "TwitterApiKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter API key you are using for this solution"
+            }
+        }, 
+        "TwitterApiSecretKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter API secret key you are using for this solution"
+            }
+        }, 
+        "TwitterAccessToken": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter access token you are using for this solution"
+            }
+        },
+        "TwitterAccessTokenSecret": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter access token secret you are using for this solution"
+            }
+        },
+        "NewsApiKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The News API key you are using for this solution"
+            }
+        },
+        "TextAnalyticsKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Text Analytics key you are using for this solution"
+            }
+        }, 
+        "TextAnalyticsEndpoint": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Text Analytics endpoint you are using for this solution"
+            }
+        }, 
+        "TextAnalyticsRegion": {
+            "type": "string", 
+            "metadata": {
+                "description": "The Text Analytics region you are using for this solution"
+            }
+        },
+        "TranslatorKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Translator key you are using for this solution"
+            }
+        },
+        "TranslatorEndpoint": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Translator endpoint you are using for this solution"
+            }
+        }, 
+        "TranslatorRegion": {
+            "type": "string", 
+            "metadata": {
+                "description": "The Translator region you are using for this solution"
+            }
+        },
+        "MapsKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Map key you are using for this solution"
+            }
+        }
+
+    },
+
+    "variables": {
+        "TWITTER_API_KEY":"TWITTERAPIKEY",
+        "TWITTER_API_SECRET_KEY":"TWITTERAPISECRETKEY",
+        "TWITTER_ACCESS_TOKEN":"TWITTERACCESSTOKEN",
+        "TWITTER_ACCESS_TOKEN_SECRET":"TWITTERACCESSTOKENSECRET",
+        
+        "NEWS_API_KEY":"NEWSAPIKEY",
+
+        "TEXT_ANALYTICS_KEY":"TEXTANALYTICSKEY",
+        "TEXT_ANALYTICS_ENDPOINT":"TEXTANALYTICSENDPOINT",
+        "TEXT_ANALYTICS_REGION":"TEXTANALYTICSREGION",
+        "TRANSLATOR_KEY":"TRANSLATORKEY",
+        "TRANSLATOR_ENDPOINT":"TRANSLATORENDPOINT",
+        "TRANSLATOR_REGION":"TRANSLATORREGION",
+        "MAPS_KEY":"MAPSKEY"
+    },
+
+    "resources": [
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TWITTER_API_KEY'))]",
+            "properties": {
+                "value": "[parameters('TwitterApiKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TWITTER_API_SECRET_KEY'))]",
+            "properties": {
+                "value": "[parameters('TwitterApiSecretKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TWITTER_ACCESS_TOKEN'))]",
+            "properties": {
+                "value": "[parameters('TwitterAccessToken')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TWITTER_ACCESS_TOKEN_SECRET'))]",
+            "properties": {
+                "value": "[parameters('TwitterAccessTokenSecret')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('NEWS_API_KEY'))]",
+            "properties": {
+                "value": "[parameters('NewsApiKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TEXT_ANALYTICS_KEY'))]",
+            "properties": {
+                "value": "[parameters('TextAnalyticsKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TEXT_ANALYTICS_ENDPOINT'))]",
+            "properties": {
+                "value": "[parameters('TextAnalyticsEndpoint')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TEXT_ANALYTICS_REGION'))]",
+            "properties": {
+                "value": "[parameters('TextAnalyticsRegion')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TRANSLATOR_KEY'))]",
+            "properties": {
+                "value": "[parameters('TranslatorKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TRANSLATOR_ENDPOINT'))]",
+            "properties": {
+                "value": "[parameters('TranslatorEndpoint')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('TRANSLATOR_REGION'))]",
+            "properties": {
+                "value": "[parameters('TranslatorRegion')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('MAPS_KEY'))]",
+            "properties": {
+                "value": "[parameters('MapsKey')]"
+            },
+            "dependsOn": []
+        },
+        { 
+            "apiVersion": "2020-10-01",
+            "name": "pid-4ac74494-c37b-5d09-a811-cc253a1b88b7",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": []
+                }
+            }
+        }
+    ]
+}
