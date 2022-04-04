@@ -7,7 +7,7 @@ Clone or download this repository and navigate to the project's root directory.
 ## Step 2: Deploy Key Vault Secrets 
 The button below will deploy secrets into the Azure Key Vault you are using for this solution:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Invoice-Process-Automation-Solution-Accelerator%2Fmain%2FDeployment%2Fdeploykeyvault.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Social-Media-Analytics-Solution-Accelerator%2Fmain%2FDeployment%2Fdeploykeyvault.json)
 
 > Note: This deployment assumes you have created a [Twiter developer account](https://developer.twitter.com/en/portal/dashboard) and a [News API account](https://newsapi.org/)
 
