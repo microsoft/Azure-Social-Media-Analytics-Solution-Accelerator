@@ -100,11 +100,11 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 4. Select `Linked`
 5. Under the category `Azure Data Lake Storage Gen2` you'll see an item with a name like `xxxxx(xxxxx- Primary)`
 6. Select the container named `socialmediaadlsfs (Primary)`, select "New folder", enter `CountryCoordinates` and select "Create"
-    * In the `CountryCoordinates` folder, select `Upload` to upload the .csv file [CountryCoordinates.csv](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/main/Data/CountryCoordinates/CountryCoordinates.csv)
+    * In the `CountryCoordinates` folder, select `Upload` to upload the .csv file [CountryCoordinates.csv](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Data/CountryCoordinates/CountryCoordinates.csv)
   
 ### Step 4.4: Upload Noteboks
 1. Launch the Synapse workspace [Synapse Workspace](https://ms.web.azuresynapse.net/)
-2. Go to `Develop`, click the `+`, and click `Import` to select all notebooks from this repository's [folder](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/main/Code/Notebooks)
+2. Go to `Develop`, click the `+`, and click `Import` to select all notebooks from this repository's [folder](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Code/Notebooks)
 3. For each of the notebooks, select `Attach to > spark1` in the top dropdown
 <!-- 4. Configure the parameters in the following 3 notebooks and publish the changes
     * `Process_News_Twitter_Data.ipynb`
@@ -115,7 +115,7 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 1. In Synapse workspace, go to `Integration`, click the "+", and choose `Pipeline`
 2. In the `Properties` window, change the pipeline name to `Process_News_and_Twitter_Data_Pipeline`
 3. Click the `{}` button at the top right corner to open the Code window
-4. Copy and paste the contents of [Process_News_and_Twitter_Data_Pipeline.json](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/main/Code/Pipelines/Process_News_and_Twitter_Data_Pipeline.json)
+4. Copy and paste the contents of [Process_News_and_Twitter_Data_Pipeline.json](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Code/Pipelines/Process_News_and_Twitter_Data_Pipeline.json)
 5. Click `OK` to apply.
 6. Trigger the pipeline and populate the paramters as shown below:
 Alternatively, add a scheduled trigger to run the pipeline on a daily basis
@@ -133,7 +133,7 @@ Alternatively, add a scheduled trigger to run the pipeline on a daily basis
 <!-- 6. Run `Process_News_Twitter_Data.ipynb`  -->
 
 ## Step 5: Power BI Set Up 
-1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/main/Deployment/PowerBI/SocialMediaAnalyticsSA-Template.pbit) in this repository
+1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Deployment/PowerBI/SocialMediaAnalyticsSA-Template.pbit) in this repository
 
 2. Enter the Serverless SQL endpoint and `default` for SQLPool name when prompted
    * Navigate to the Synapse Workspace overview page in the Azure Portal, copy the Serverless SQL endpoint
