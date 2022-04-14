@@ -100,7 +100,7 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 4. Select `Linked`
 5. Under the category `Azure Data Lake Storage Gen2` you'll see an item with a name like `xxxxx(xxxxx- Primary)`
 6. Select the container named `socialmediaadlsfs (Primary)`, select "New folder", enter `CountryCoordinates` and select "Create"
-    * In the `CountryCoordinates` folder, select `Upload` to upload the .csv file [CountryCoordinates.csv](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Data/CountryCoordinates/CountryCoordinates.csv)
+    * In the `CountryCoordinates` folder, select `Upload` to upload the .csv file [CountryCoordinates.csv](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/blob/main/Data/CountryCordinates/CountryCordinates.csv)
   
 ### Step 4.4: Upload Noteboks
 1. Launch the Synapse workspace [Synapse Workspace](https://ms.web.azuresynapse.net/)
@@ -133,7 +133,7 @@ Alternatively, add a scheduled trigger to run the pipeline on a daily basis
 <!-- 6. Run `Process_News_Twitter_Data.ipynb`  -->
 
 ## Step 5: Power BI Set Up 
-1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Deployment/PowerBI/SocialMediaAnalyticsSA-Template.pbit) in this repository
+1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/blob/main/Power%20BI/SocialMediaAnalyticsSA-Template.pbit) in this repository
 
 2. Enter the Serverless SQL endpoint and `default` for SQLPool name when prompted
    * Navigate to the Synapse Workspace overview page in the Azure Portal, copy the Serverless SQL endpoint
