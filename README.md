@@ -1,6 +1,6 @@
 ![Social Media Analytics](./Deployment/img/SABanner.png)
 
-## About this Repository
+# Azure Social Media Analytics Solution Accelerator
 
 Monitoring social media has become important for companies and organizations around the world. It is an essential tool for innovation and marketing. Its benefits range from the ability to get instant feedback on products and services, allowing better relations with end users and customers, providing a means to increase user satisfaction very quickly, and keeping up with the competition.
 
