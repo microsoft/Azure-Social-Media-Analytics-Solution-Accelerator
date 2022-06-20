@@ -136,7 +136,7 @@ Alternatively, add a scheduled trigger to run the pipeline on a daily basis
 ## Step 5: Power BI Set Up 
 1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/blob/main/Power%20BI/SocialMediaAnalyticsSA-Template.pbit) in this repository
 
-2. Enter the Serverless SQL endpoint and `default` for SQLPool name when prompted
+2. Enter the Synapse Serverless SQL endpoint and `default` for SQLPool/database name when prompted
    * Navigate to the Synapse Workspace overview page in the Azure Portal, copy the Serverless SQL endpoint
 
 3. Select `Refresh` after all the tables load and the dashboard with three pages shows up.
