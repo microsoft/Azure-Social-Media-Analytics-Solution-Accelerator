@@ -9,7 +9,7 @@ The button below will deploy secrets into the Azure Key Vault you are using for 
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Social-Media-Analytics-Solution-Accelerator%2Fmain%2FDeployment%2Fdeploykeyvault.json)
 
-> Note: This deployment assumes you have created a [Twiter developer account](https://developer.twitter.com/en/portal/dashboard) and a [News API account](https://newsapi.org/)
+> Note: This deployment assumes you have created a [Twiter developer account](https://developer.twitter.com/en/portal/dashboard) with "Elevated" access to the Twitter API's features (check out this [link](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) for more info on the access levels) and a [News API account](https://newsapi.org/).
 
 ### **Configuring the ARM template**
 In order to deploy the secrets into the Azure Key Vault, we need to configure the following variables.
@@ -47,17 +47,17 @@ Populate the variables accordingly:
 ## Step 3: Security Access
 ### Step 3.1: Add Azure Synapse to Azure Key Vault 
 1. Go to the Key Vault that was created in the previous step 
-2. Click `Access policies`, click `+ Create`, under "Secret permissions" select `Get` and `List` and click `Next`
-3. Search for your Synapse Workspace name to be added to the Key vault and click `Next` 
+2. Click `Access policies`, click `+ Add Access Policy`, on the new window, on the `Secret Permissions` select `Get` and `List`. 
+3. On the `Select principal` option, add your synapse resource name to be added to the Key vault and click `Save`
 4. Select `Review + create` and `Save` the changes made. 
 
 ![Key Vault](./img/KeyVaultSecrets.png)
 
 ### Step 3.2: Add your IP address to Synapse firewall
-Before you can upload assests to the Synapse Workspace you will need to add your IP address:
+Before you can upload assets to the Synapse Workspace you will need to add your IP address:
 1. Go to the Synapse resouce you created in the previous step. 
 2. Navigate to `Networking` under `Security` on the left hand side of the page.
-3. At the top of the screen click `+ Add client IP`
+3. At the middle of the screen click `+ Add client IP`
     ![Update Firewalls](./img/deploy-firewall.png)  
 4. Your IP address should now be visible in the IP list
 
@@ -112,12 +112,13 @@ In order to perform the necessary actions in Synapse workspace, you will need to
     * `Ingest_Process_Tweets.ipynb` -->
 
 ### Step 4.5: Set up Pipelines
-1. In Synapse workspace, go to `Integration`, click the "+", and choose `Pipeline`
-2. In the `Properties` window, change the pipeline name to `Process_News_and_Twitter_Data_Pipeline`
+1. In Synapse workspace, go to `Integrate`, click the "+", and choose `Pipeline`
+2. The new `Pipeline 1` appears, click on the three dots `...` on the right corner , click `Rename`, change the pipeline name to `Process_News_and_Twitter_Data_Pipeline`
 3. Click the `{}` button at the top right corner to open the Code window
 4. Copy and paste the contents of [Process_News_and_Twitter_Data_Pipeline.json](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/tree/main/Code/Pipelines/Process_News_and_Twitter_Data_Pipeline.json)
 5. Click `OK` to apply.
-6. Trigger the pipeline and populate the paramters as shown below:
+6. Click `Publish all` at the top of the page.
+7. Click `Add trigger`, select `Trigger now` Trigger the pipeline and populate the parameters as shown below:
 Alternatively, add a scheduled trigger to run the pipeline on a daily basis
 ![pipeline parameters](./img/PipelineParameters.png)
 
