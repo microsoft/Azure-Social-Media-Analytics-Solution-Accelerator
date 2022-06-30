@@ -1,5 +1,7 @@
+azure-keyvault-secrets==4.4.0
 feedparser==6.0.8
-azure-core==1.22.1
+msrest==0.7.0
+azure-core==1.24.0
 azure-cosmos==4.2
 tweepy==3.10.0
 azure-ai-textanalytics==5.1.0
