@@ -234,7 +234,7 @@
                 "dynamicExecutorAllocation": {
                     "enabled": true,
                     "minExecutors": 3,
-                    "maxExecutors": 6    
+                    "maxExecutors": 5    
                 }
             }
         },
