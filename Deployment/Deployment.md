@@ -120,7 +120,7 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 6. Click `Publish all` at the top of the page.
 7. Click `Add trigger`, select `Trigger now` Trigger the pipeline and populate the parameters as shown below:
 Alternatively, add a scheduled trigger to run the pipeline on a daily basis
-![pipeline parameters](./img/PipelineParameters.png)
+![pipeline parameters](./img/PipelineParameters.png) 
 
 <!-- 5. Update the following parameters in `Process_News_Twitter_Data.ipynb`, attach a Spark pool to the notebook and publish the changes 
     ```
