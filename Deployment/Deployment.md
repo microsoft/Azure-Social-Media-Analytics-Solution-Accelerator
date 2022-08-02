@@ -133,6 +133,7 @@ You can also set default values for those parameters, so you don't need to type 
 Alternatively, add a scheduled trigger to run the pipeline daily.
 
 ## Step 5: Power BI Set Up 
+
 1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/blob/main/Power%20BI/SocialMediaAnalyticsSA-Template.pbit) in this repository
 
 2. Enter the Synapse Serverless SQL endpoint and `default` for SQLPool/database name when prompted
