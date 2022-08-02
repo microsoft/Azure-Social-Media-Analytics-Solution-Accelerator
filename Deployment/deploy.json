@@ -232,7 +232,9 @@
                 "sessionLevelPackagesEnabled": false,
                 "cacheSize": 0,
                 "dynamicExecutorAllocation": {
-                    "enabled": true
+                    "enabled": true,
+                    "minExecutors": 3,
+                    "maxExecutors": 5    
                 }
             }
         },
