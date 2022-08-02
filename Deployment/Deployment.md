@@ -122,9 +122,9 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 
 ![pipeline parameters](./img/PipelineParameters.png)
 
-* **data_lake_account_name**: your storage accont, example: synapsestrgz99t9l9.
-* **file_system_name**: Synapse Workspace ADLS FileSystem, example: socialmediaadlsfs.
-* **Key Vault Name**: your Azure Key Vault name.
+* **data_lake_account_name**: your storage accont name, example: synapsestrgz99t9l9.
+* **file_system_name**: the Synapse Workspace ADLS FileSystem name `socialmediaadlsfs`.
+* **Key Vault Name**: the name of the Key Vault Linked Service `KeyVaultLinkedService`.
 * **query**: the query to be executed on social media sources. [How to query Twitter](https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators)
 * **topic**: the topic used to tag the data collected, it is used to group it in the dashboard. 
 
