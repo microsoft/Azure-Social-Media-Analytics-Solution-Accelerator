@@ -80,7 +80,7 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 3. Navigate to the `Manage` tab in the Studio and click on the `Apache Spark pools`  
 ![manage spark pool](./img/ManageSparkPool.png)
 5. Click `...` on the deployed Spark Pool and select `Packages`
-6. Click `Upload` and select [requirements.txt](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/main/Deployment/Code/requirements.txt) from the cloned repo.
+6. Click `Upload` and select [requirements.txt](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/main/Code/requirements.txt) from the cloned repo.
 7. Click `Apply`
 ![upload requirements](./img/Requirements.png)
 
