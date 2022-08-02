@@ -119,19 +119,18 @@ In order to perform the necessary actions in Synapse workspace, you will need to
 5. Click `OK` to apply.
 6. Click `Publish all` at the top of the page.
 7. Click `Add trigger`, select `Trigger now` Trigger the pipeline and populate the parameters as shown below:
-Alternatively, add a scheduled trigger to run the pipeline on a daily basis
+
 ![pipeline parameters](./img/PipelineParameters.png)
 
-<!-- 5. Update the following parameters in `Process_News_Twitter_Data.ipynb`, attach a Spark pool to the notebook and publish the changes 
-    ```
-    data_lake_account_name = '' # Synapse Workspace ADLS
-    file_system_name = '' # Synapse Workspace ADLS FileSystem
+* **data_lake_account_name**: your storage accont, example: synapsestrgz99t9l9.
+* **file_system_name**: Synapse Workspace ADLS FileSystem, example: socialmediaadlsfs.
+* **Key Vault Name**: your Azure Key Vault name.
+* **query**: the query to be executed on social media sources. [How to query Twitter](https://developer.twitter.com/en/docs/twitter-api/v1/rules-and-filtering/search-operators)
+* **topic**: the topic used to tag the data collected, it is used to group it in the dashboard. 
 
-    keyvault_name = '' # Key Vault Name
+You can also set default values for those parameters, so you don't need to type them every time your trigger it.
 
-    query = '' # query string that you like to get news and tweets for
-    ``` -->
-<!-- 6. Run `Process_News_Twitter_Data.ipynb`  -->
+Alternatively, add a scheduled trigger to run the pipeline daily.
 
 ## Step 5: Power BI Set Up 
 1. Open the [Power BI report template](https://github.com/microsoft/Azure-Social-Media-Analytics-Solution-Accelerator/blob/main/Power%20BI/SocialMediaAnalyticsSA-Template.pbit) in this repository
