@@ -28,7 +28,7 @@ The button below will deploy Azure Synapse Analytics, Azure Language Service, Az
 
 > NOTE: Currently Maps is only available in the following regions: `East US`, `North Europe`, `West Central US`, `West Europe` and `West US 2`. In the template we are using `East US` for the Map service. If you need to use another region, please change the template with one of the above regions. 
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Social-Media-Analytics-Solution-Accelerator%2Fmain%2FDeployment%2Fdeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fi-am-dan%2FAzure-Social-Media-Analytics-Solution-Accelerator%2Fmain%2FDeployment%2Fdeploy.json)
 
 * Go to the [Deployment guide](./Deployment/Deployment.md) to set up your Azure resources for this solution.  
 
