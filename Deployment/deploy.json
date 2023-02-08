@@ -232,7 +232,7 @@
                 "sessionLevelPackagesEnabled": false,
                 "cacheSize": 0,
                 "dynamicExecutorAllocation": {
-                    "enabled": true
+                    "enabled": false
                 }
             }
         },
